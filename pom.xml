@@ -17,6 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <docker.image.prefix>pengxiaoqiang</docker.image.prefix>
+        <imagename>docker-test</imagename>
     </properties>
     <dependencies>
         <dependency>
@@ -40,7 +41,7 @@
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.3.6</version>
                 <configuration>
-                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                    <repository>${docker.image.prefix}/${imagename}</repository>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
